@@ -3,8 +3,8 @@ block vars
 	- amp = true
 	//- dev = false
 	//- dev = true
-	- inline = true
 	- inline = false
+	- inline = true
 
 block meta
 	meta(charset='UTF-8')
@@ -24,7 +24,7 @@ block link
 	script(async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js")
 
 	//- fonts
-	link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo:400,700")
+	link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald")
 	if inline == false
 		link(rel='stylesheet', href='css/app.css')
 	if inline == true
