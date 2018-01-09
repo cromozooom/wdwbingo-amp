@@ -77,7 +77,7 @@ gulp.task('uncss',['build'], function () {
 		.pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
 		.pipe(uncss({
 			//html: ['app/index_amp.html']		// index page
-			html: ['app/index_amp.html', 'app/categ_amp.html' ]		// 
+			html: ['app/index_amp.html' ]		// 
 			
 		}))
 		.pipe(prefix(['last 2 versions'], {

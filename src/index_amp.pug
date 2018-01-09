@@ -1,6 +1,6 @@
 extends views/templates/layout_amp
 block content
-	.container.mt-4
+	section.container.mt-4
 		.row
 			.col-12.col-lg-4.pb-4
 				.card.h-100
@@ -39,11 +39,11 @@ block content
 		ul.top.top--colorBlue.list-unstyled.container.p-0
 			li.line.d-flex.flex-column.m-0.top--head
 				.row.py-1
-					.col-1.text-center
+					.col-1.d-none.d-lg-block.text-center
 						.px-2 S.NO
 					.col.d-none.d-lg-block Bingo site
-					.col.text-right
-						.px-2 Deposit Bonus
+					.col.text-center.text-lg-left
+						.mr-2 Deposit Bonus
 					.col.d-none.d-lg-block Software
 					.col.d-none.d-lg-block.text-right
 						.mr-2 Get Bonus
@@ -58,9 +58,11 @@ block content
 		ul.top.top--primary.list-unstyled.container.p-0
 			li.line.d-flex.flex-column.m-0.top--head
 				.row.py-1
-					.col-1.text-center S.NO
+					.col-1.d-none.d-lg-block.text-center
+						.px-2 S.NO
 					.col.d-none.d-lg-block Bingo site
-					.col Deposit Bonus
+					.col.text-center.text-lg-left
+						.mr-2 Deposit Bonus
 					.col.d-none.d-lg-block Software
 					.col.d-none.d-lg-block.text-right
 						.mr-2 Get Bonus
@@ -70,45 +72,54 @@ block content
 			+top(4, "", "Virtue Fusion" , "30% deposit Bonus", "Deposit £10 play with £40")
 			+top(5, "Oink Bingo", "Dragonfish" , "30% deposit Bonus", "Deposit £10 play with £40")
 
-
-						
-						
-						
-						//-	p Deposit £5 play with £20
-						//- small * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
-						//-	p Deposit £10 play with £40
-						//- small * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
-						//-	p Deposit £5 play with £30
-						//- small * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
-						//-	p Deposit £10 play with £60
-						//- small * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
-						//-	p Deposit £10, Get £70 of Bingo Tickets
-						//- small * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
-						//-	p Visit Mr Green Now
-						//- small * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
-						//-	p Deposit £10 play with £40
-						//- small * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
-						//-	p Deposit £10 spin the Wheel
-						//- small * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
-						//-	p Deposit £10 play with £40
-						//- small * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
-						//-	p Deposit £10 Spin the Wheel
-						//- small * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
-						//-	p Deposit £10 play with £40
-						//- small * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
-						//-	p Deposit £10 on slots, play with £20
-						//- small * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
-						//-	p Deposit £10 play with £80
-						//- small * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
-						//-	p Deposit £10 play with £20
-//- small * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
-		.col
+	section
+		.col.py-4
 			amp-selector.ampTabContainer(role='tablist', layout='container')
-				.tabButton(role='tab', selected='', option='a') Tab one
-				.tabContent(role='tabpanel') Tab one content... 
-				
-				.tabButton(role='tab', option='b') Tab two
-				.tabContent(role='tabpanel') Tab two content... 
-				
-				.tabButton(role='tab', option='c') Tab three
-				.tabContent(role='tabpanel') Tab three content... 
+				.tabButton(role='tab', selected='', option='a')
+					h4.py-2 Site of the month
+				.tabContent(role='tabpanel')
+					.p-2
+						+image("img-fluid", "images/banners/vernon_bingo.png", 360, 260 )
+
+				.tabButton(role='tab', option='b')
+					h4.py-2 No deposit offers
+				.tabContent(role='tabpanel')
+					.p-2
+						table.table
+							thead.thead-secondary
+								tr.sans
+									th(scope='col') #
+									th(scope='col') Site
+									th(scope='col') Bonus
+									th.text-right(scope='col') Get Bonus
+							tbody
+								tr
+									th(scope='row') 1
+									td: h4 Merlin Bingo	
+									td £10 Free, No Deposit
+									td.text-right
+										a.btn.btn-primary.btn-sm(href="#") PLAY
+								tr
+									th(scope='row') 2
+									td: h4 Sparkly Bingo
+									td 200% Deposit Bonus
+									td.text-right
+										a.btn.btn-primary.btn-sm(href="#") PLAY
+								tr
+									th(scope='row') 3
+									td: h4 Wish Bingo
+									td £10 Free, No Deposit
+									td.text-right
+										a.btn.btn-primary.btn-sm(href="#") PLAY
+								tr
+									th(scope='row') 4
+									td: h4 Sparkly Bingo
+									td 200% Deposit Bonus
+									td.text-right
+										a.btn.btn-primary.btn-sm(href="#") PLAY
+								tr
+									th(scope='row') 5
+									td: h4 Wish Bingo
+									td £10 Free, No Deposit
+									td.text-right
+										a.btn.btn-primary.btn-sm(href="#") PLAY

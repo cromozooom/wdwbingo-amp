@@ -37,8 +37,8 @@ mixin newsard1(title, date, img)
 			a.mt-auto(href="#") more...
 			hr
 
-mixin stars(count)
-	ul.company-rating-star.list-inline.m-0
+mixin stars(count, marginClass)
+	ul.company-rating-star.list-inline.d-inline-block.m-0
 		if count == 0
 			+star("empty")
 			+star("empty")
@@ -288,21 +288,30 @@ mixin wysiwyg(bg)
 mixin top(no, title, software , offer, depozit)
 	li.line.d-flex.flex-column.m-0
 		.content.row.py-1
-			.col-1.text-center= no
+			.col-1.text-center.d-none.d-lg-block= no
 			.col.d-none.d-lg-block
-				h3.title-bingo= title
-				+stars(4)
+				h3.text-center.text-lg-left.title-bingo
+					= title
+					+stars(4)
 			.col
 				.d-block.d-lg-none
-					h3.title-bingo= title
-					+stars(4)
-				h3= offer
-				p= depozit
-				a.d-block.d-lg-none.ml-auto.btn.btn-primary(href="#") PLAY NOW
+					.badge= no
+					h3.title-bingo.text-center.text-lg-left
+						= title
+						br
+						+stars(4)
+				h3.text-center.text-lg-left= offer
+				p.text-center.text-lg-left= depozit
 			.col.d-none.d-lg-block
 				small= software
 			.col.d-none.d-lg-block.text-right
 				.top--cta.w-100
 					a.btn.btn-primary.mr-2(href="#") PLAY NOW
 		
-		.text-muted.terms-font.text-center.py-2 * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
+		footer.text-center
+			a.d-inline-block.d-lg-none.btn.btn-primary(href="#") PLAY NOW
+			.text-muted.terms-font.text-center.py-2 * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
+
+mixin image(myClass, path, w, h )
+	.amp-img
+		amp-img(class= myClass src= path, alt="", width= w height= h layout="responsive")

@@ -1,10 +1,27 @@
 .ampTabContainer
 	display: flex
 	flex-wrap: wrap
-	
+.tabButton
+	border: 1px solid transparent
+	border-bottom: 1px solid $secondary
+
 .tabButton[selected]
 	outline: none
-	background: #ccc
+	//background: darken(#fff, 20%)
+	border: 1px solid $secondary
+	border-bottom: none
+
+amp-selector [option]
+	cursor:pointer
+amp-selector [option][selected]
+	cursor: auto
+	outline: 0px solid rgba(0,0,0,.7)
+amp-selector [disabled][option],
+amp-selector[disabled] [option],
+amp-selector[disabled] [selected],
+amp-selector [selected][disabled]
+	cursor:auto
+	outline:none
 
 .tabButton
 	list-style: none
@@ -16,20 +33,20 @@
 	display: none
 	width: 100%
 	order: 1 //* must be greater than the order of the tab buttons to flex to the next line
-	border: 1px solid #ccc
+	border: 1px solid $secondary
+	border-top: none
 
 .tabButton[selected]+.tabContent
 	display: block
 
-// For example below (not required)
+// For example below (not requi$secondary)
 .itemCustom
 	border: 1px solid #000
+	border-bottom: none
 	height: 280px
 	width: 380px
 	margin: 10px
 	text-align: center
 	padding-top: 140px
 
-amp-selector
-	padding: 1rem
-	margin: 1rem
+
