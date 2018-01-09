@@ -1,0 +1,50 @@
+section.container.py-4
+	amp-selector.ampTabContainer(role='tablist', layout='container')
+		.tabButton(role='tab', selected='', option='a')
+			h4.py-2 Site of the month
+		.tabContent(role='tabpanel')
+			.p-2
+				+image("img-fluid", "images/banners/vernon_bingo.png", 360, 260 )
+
+		.tabButton(role='tab', option='b')
+			h4.py-2 No deposit offers
+		.tabContent(role='tabpanel')
+			.p-2
+				table.table
+					thead.thead-secondary
+						tr.sans
+							th(scope='col') #
+							th(scope='col') Site
+							th(scope='col') Bonus
+							th.text-right(scope='col') Get Bonus
+					tbody
+						tr
+							th(scope='row') 1
+							td: h4 Merlin Bingo	
+							td £10 Free, No Deposit
+							td.text-right
+								a.btn.btn-primary.btn-sm(href="#") PLAY
+						tr
+							th(scope='row') 2
+							td: h4 Sparkly Bingo
+							td 200% Deposit Bonus
+							td.text-right
+								a.btn.btn-primary.btn-sm(href="#") PLAY
+						tr
+							th(scope='row') 3
+							td: h4 Wish Bingo
+							td £10 Free, No Deposit
+							td.text-right
+								a.btn.btn-primary.btn-sm(href="#") PLAY
+						tr
+							th(scope='row') 4
+							td: h4 Sparkly Bingo
+							td 200% Deposit Bonus
+							td.text-right
+								a.btn.btn-primary.btn-sm(href="#") PLAY
+						tr
+							th(scope='row') 5
+							td: h4 Wish Bingo
+							td £10 Free, No Deposit
+							td.text-right
+								a.btn.btn-primary.btn-sm(href="#") PLAY
