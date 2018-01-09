@@ -41,8 +41,10 @@ block header
 	
 	nav.nav
 		//- LOGO
-		a.logo.ml-3(href='https://www.bestnewbingosites.co.uk')
-			img.img-fluid(src="images/logoWDWBingo.png", alt="")
+		a.logo.ml-3.mt-2(href='https://www.bestnewbingosites.co.uk')
+			//- +image("img-fluid", "images/logoWDWBingo.png", 110, 44)
+			svg.logo(viewbox='0 0 188 80')
+				use(xlink:href='#logo', x='0', y='0')
 		//-.ampstart-btn
 		a.ml-auto.px-2.float-right.startButton(on='tap:sidebar.toggle'): strong
 			svg.navbar__button(viewbox='0 0 110 110')
