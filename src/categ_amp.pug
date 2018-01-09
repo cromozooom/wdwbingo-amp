@@ -1,0 +1,42 @@
+extends views/templates/layout_amp
+block content
+	.container.p-0
+		//- bingo site
+		//+header(4)
+		//- RELATED
+		+related(4, "New Slot Sites")
+	+wysiwyg("p")
+	+wysiwyg("s")
+	+wysiwyg("w")
+			
+
+	.container.p-0.bg-s
+		.wysiwyg.p-3.py-5.mx-auto
+			h1 Articles related
+			hr.title-underline
+			ul.list-unstyled.my-4.relatedArticle
+				li
+					a.d-flex.justify-content-between(href='https://www.bestnewbingosites.co.uk/news/cartoon-characters/')
+						p: strong Where Did All The Cartoon Characters Go?
+						span.text-right.date.ml-auto 30th November 2017
+				li
+					hr
+					a.d-flex.justify-content-between(href='https://www.bestnewbingosites.co.uk/news/win-car-day-sun-bingo/')
+						p: strong Win A Car A Day At Sun Bingo
+						span.text-right.date.ml-auto 20th November 2017
+				li
+					hr
+					a.d-flex.justify-content-between(href='https://www.bestnewbingosites.co.uk/news/white-rabbit-slot-next-big-thing/')
+						p: strong White Rabbit – The Next Big Thing In Slot Games?
+						span.text-right.date.ml-auto 15th November 2017
+				li
+					hr
+					a.d-flex.justify-content-between(href='https://www.bestnewbingosites.co.uk/news/mysterious-licensing-change-cozy-bingo-sites/')
+						p: strong Mysterious Licensing Change at Cozy Bingo Sites
+						span.text-right.date.ml-auto 7th November 2017
+				li
+					hr
+					a.d-flex.justify-content-between(href='https://www.bestnewbingosites.co.uk/news/sun-bingo-new-player-cinema-ticket-giveaway/')
+						p: strong Sun Bingo New Player Cinema Ticket Giveaway
+						span.text-right.date.ml-auto 23rd October 2017
+

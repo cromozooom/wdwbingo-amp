@@ -1,0 +1,37 @@
+block vars
+	- dev = true
+	- dev = false
+	- amp = false
+block mixins
+	include ../includes/_mixin
+
+doctype html
++html(amp)
+	head
+		block meta
+			meta(charset='UTF-8')
+			meta(name='viewport', content='width=device-width, initial-scale=1.0')
+			meta(http-equiv='X-UA-Compatible', content='ie=edge')
+			title= amp + "Index"
+		block link
+			link(rel='stylesheet', href='css/app.css')
+
+	body
+		block header
+			.container
+				p Header
+		block content
+			.container
+				.container-fluid
+					h1= casino.title
+					h6= "test"
+					p sa traim bine
+		block footer
+			.container
+				p footer
+		//-block scripts
+			// build:js js/bundle.js
+			script(src="/js/custom.js")
+			script(src="/js/custom1.js")
+			script(src="/js/custom2.js")
+			// endbuild

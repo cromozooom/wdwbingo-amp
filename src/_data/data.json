@@ -1,0 +1,311 @@
+{
+	"sitePage": {
+		"path": "/index",
+		"companyName": 	"Optibid",
+		"author": "Optibid",
+		"authorEmail": "contact@optibid.com",
+		"designer" : "Razvan Nicu",
+		"designerEmail": "cromozooom@gmail.com",
+		"replay-to": "contact@optibid.com",
+		"owner": "Optibid",
+		"website": "https://www.optibid.com",
+		"date": ["November 17, 2017", "2017-11-17"]
+	},
+	"metas": [
+		{
+			"type" : "title",
+			"name": "title",
+			"body": "Optibid | The PPC Agency backed by Data Science | London"
+		},
+		{
+			"type" : "meta",
+			"name": "description",
+			"body": "Transform your PPC campaign performance with Optibid, thanks to our advanced bidding algorithm & marketing expertise. We are invested in your success."
+		},
+		{
+			"type" : "meta",
+			"name": "url",
+			"body": "https://www.optibid.com"
+		},
+		{
+			"type" : "meta",
+			"name": "identifier-URL",
+			"body": "https://www.optibid.com"
+		},
+		{
+			"type" : "link",
+			"name": "Link index",
+			"rel": "https://www.optibid.com",
+			"body": "Transform your PPC campaign performance with Optibid, thanks to our advanced bidding algorithm & marketing expertise. We are invested in your success."
+		}
+	],
+	"menu": {
+		"main": [
+			{
+				"link": "index",
+				"active": "index",
+				"copy": "home"
+			},
+			{
+				"link": "what-we-do",
+				"active": "whatWeDo",
+				"copy": "What we do"
+			},
+			{
+				"link": "our-product",
+				"active": "ourProduct",
+				"copy": "Our product"
+			},
+			{
+				"link": false,
+				"active": "whoWeAre",
+				"copy": "About us",
+				"submenu": [
+					{
+						"link": "who-we-are",
+						"active": "whoWeAre",
+						"copy": "Who we are"
+					},
+					{
+						"link": "jobs",
+						"active": "whoWeAre",
+						"copy": "Jobs"
+					}
+				]
+			},
+			{
+				"link": "contact",
+				"active": "contact",
+				"type": "form",
+				"copy": "Contact us"
+			}
+		],
+		"login": {
+			"link": "http://clients.optibid.com/",
+			"active": "login",
+			"copy": "Login"
+		}
+	},
+
+	"related": [
+		{
+			"title": "Give Back Bingo",
+			"identity": {
+				"logo": "give-back-bingo-150x150.png",
+				"screen": false,
+				"color": "#461c19"
+			},
+			"star": 5,
+			"offer": {
+				"body": ["20 Free spins on Cutie Fruits, no deposit required when registering"],
+				"terms": ["* New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly"],
+				"list": [
+					"Charity Bingo Site",
+					"Stride Gaming Bingo Software",
+					"Exclusive Promotions",
+					"Help Support Good Causes"
+				]
+			},
+			"metas": [
+				{
+					"title": "Bingo Software",
+					"desc": "Virtue Fusion/Playtech"
+				},
+				{
+					"title": "Bingo Network",
+					"desc": "Virtue Fusion"
+				}
+			],
+			"description": {
+				"short": "Give Back Bingo is a charity bingo site on the Daub Alderney platform (also used by Kitty Bingo and sister sites",
+				"long": "As well as all the Virtue Fusion network promotions, Aztec – very unusually for a smaller Playtech bingo site – has a couple of exclusive bingo rooms and a number of exclusive regular promotions and currently these include:"
+			}
+		},
+		{
+			"title": "Lucy Bingo",
+			"identity": {
+				"logo": "lucy-bingo-150x150.png",
+				"screen": false,
+				"color": "#461c19"
+			},
+			"star": 5,
+			"offer": {
+				"body": ["Deposit £10, Play with £40"],
+				"terms": ["* New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly"],
+				"list": ["Dragonfish Bingo Site","Bingo Bonus & Free Bingo Ticket Offers","Free Bingo","Dragonfish Bingo Site","Exclusive Bingo Jackpots"]
+			},
+			"metas": [
+				{
+					"title": "Bingo Software",
+					"desc": "Virtue Fusion/Playtech"
+				},
+				{
+					"title": "Bingo Network",
+					"desc": "Virtue Fusion"
+				}
+			],
+			"description": {
+				"short": "Lucy Bingo is a Dragonfish bingo site from an operator that is renowned for its super generous bonus offers.  A sister",
+				"long": "As well as all the Virtue Fusion network promotions, Aztec – very unusually for a smaller Playtech bingo site – has a couple of exclusive bingo rooms and a number of exclusive regular promotions and currently these include:"
+			}
+		},
+		{
+			"title": "Bid Bingo",
+			"identity": {
+				"logo": "bid-bingo-150x150.png",
+				"screen": false,
+				"color": "#461c19"
+			},
+			"star": 5,
+			"offer": {
+				"body": ["300% Bingo Bonus, 10 Bonus Spins"],
+				"terms": ["* New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly"],
+				"list": [
+					"Dragonfish Bingo Site",
+					"Exclusive Royal Bingo Room",
+					"Redeposit Bonuses",
+					"Big Slots Choice",
+					"Charity Bingo Site",
+					"Stride Gaming Bingo Software"
+				]
+			},
+			"metas": [
+				{
+					"title": "Bingo Software",
+					"desc": "Virtue Fusion/Playtech"
+				},
+				{
+					"title": "Bingo Network",
+					"desc": "Virtue Fusion"
+				}
+			],
+			"description": {
+				"short": "Bid Bingo was originally Yahoo Bingo and is now been completely reinvented as a Dragonfish network bingo site. It has all",
+				"long": "As well as all the Virtue Fusion network promotions, Aztec – very unusually for a smaller Playtech bingo site – has a couple of exclusive bingo rooms and a number of exclusive regular promotions and currently these include:"
+			}
+		},
+		{
+			"title": "Deal or No Deal Casino",
+			"identity": {
+				"logo": "dondcasino1-150x150.png",
+				"screen": false,
+				"color": "#461c19"
+			},
+			"star": 5,
+			"offer": {
+				"body": ["100% First Deposit Bonus Up to £100, for Slingo or Slots"],
+				"terms": ["* New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly"],
+				"list": [
+					"75 Ball Bingo On Steroids",
+					"Single Player & Multiplayer Slingo",
+					"Magic Mine Real Money Skill Game",
+					"100s of Slot Games"
+				]
+			},
+			"metas": [
+				{
+					"title": "Bingo Software",
+					"desc": "Virtue Fusion/Playtech"
+				},
+				{
+					"title": "Bingo Network",
+					"desc": "Virtue Fusion"
+				}
+			],
+			"description": {
+				"short": "Lucy Bingo is a Dragonfish bingo site from an operator that is renowned for its super generous bonus offers.  A sister",
+				"long": "As well as all the Virtue Fusion network promotions, Aztec – very unusually for a smaller Playtech bingo site – has a couple of exclusive bingo rooms and a number of exclusive regular promotions and currently these include:"
+			}
+		}
+	],
+
+
+
+
+	"casino": {
+		"title": "Aztec Bingo",
+		"identity": {
+			"logo": "aztecbingo-150x150.png",
+			"screen": "aztec-bingo01.jpg",
+			"color": "#461c19"
+		},
+		"star": 5,
+		
+		"offer": {
+			"body": ["Deposit £10, Play with £40"],
+			"terms": ["* New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly"]
+		},
+
+		"description": {
+			"short": "Aztec Bingo is a Playtech bingo site with the new HTML5 version of the bingo software, allowing seamless play across all devices.  They have been up and running for a while now following a soft launch last year.",
+			"long": "As well as all the Virtue Fusion network promotions, Aztec – very unusually for a smaller Playtech bingo site – has a couple of exclusive bingo rooms and a number of exclusive regular promotions and currently these include:"
+		},
+
+		"metas": [
+			{
+				"title": "No Deposit Offer",
+				"desc": ["None"]
+			},
+			{
+				"title": "Bingo Bonus",
+				"desc": ["300% on 1st deposit - bingo bonus up to £60"]
+			},
+			{
+				"title": "Redeposit Bonus Details",
+				"desc": ["2nd deposit of £5 or more: 200% bingo bonus up to £100"]
+			},
+			{
+				"title": "Bonus Expiry Info",
+				"desc": ["7 days"]
+			},
+			{
+				"title": "Bingo Wagering Requirements",
+				"desc": ["3 x bonus"]
+			},
+			{
+				"title": "Payment Methods",
+				"desc": ["Credit Card/Debit Card, Paysafecard, Paypal"]
+			},
+			{
+				"title": "Minimum Withdrawal",
+				"desc": ["£10"]
+			},
+			{
+				"title": "Maximum Withdrawal",
+				"desc": ["£10,000 in a 24 hour period"]
+			},
+			{
+				"title": "Withdrawal Processing Time",
+				"desc": ["7 - 14 working days"]
+			},
+			{
+				"title": "Bingo Software",
+				"desc": "Virtue Fusion/Playtech"
+			},
+			{
+				"title": "Bingo Network",
+				"desc": "Virtue Fusion"
+			},
+			{
+				"title": "Free Bingo",
+				"desc": ["Yes"]
+			},
+			{
+				"title": "Penny Bingo",
+				"desc": ["One hour a day"]
+			},
+			{
+				"title": "Date Established",
+				"desc": ["September, 2016"]
+			},
+			{
+				"title": "UK License Holder",
+				"desc": ["Virtue Fusion (Alderney) Limited"]
+			},
+			{
+				"title": "UK License Reference Number",
+				"desc": ["38838"]
+			}
+		]
+	}
+}

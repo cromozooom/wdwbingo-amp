@@ -1,0 +1,291 @@
+extends layout
+block vars
+	- amp = true
+	//- dev = false
+	//- dev = true
+	- inline = true
+	- inline = false
+
+block meta
+	meta(charset='UTF-8')
+	meta(name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1")
+	meta(http-equiv='X-UA-Compatible', content='ie=edge')
+	title= amp + "Index"
+
+block link
+	link(rel="canonical" href="hello-world.html")
+	script(async='', src='https://cdn.ampproject.org/v0.js')
+	script(async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
+	//-script(async='', custom-element='amp-iframe', src='https://cdn.ampproject.org/v0/amp-iframe-0.1.js')
+	//-script(async='', custom-element='amp-app-banner', src='https://cdn.ampproject.org/v0/amp-app-banner-0.1.js')
+	
+	script(async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js")
+	script(async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js")
+	script(async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js")
+
+	//- fonts
+	link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo:400,700")
+	if inline == false
+		link(rel='stylesheet', href='css/app.css')
+	if inline == true
+		style(amp-custom)
+			include ../../../app/css/app.css
+	//- AMP-BOILERPLATE
+	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+	<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+	
+block header
+	.d-none
+		include ../includes/svg/svg_BingoPage.pug
+	
+	
+	nav.nav
+		//- LOGO
+		a.logo.ml-3(href='https://www.bestnewbingosites.co.uk')
+			img.img-fluid(src="images/logoWDWBingo.png", alt="")
+		//-.ampstart-btn
+		a.ml-auto.px-2.float-right.startButton(on='tap:sidebar.toggle'): strong
+			svg.navbar__button(viewbox='0 0 110 110')
+				use(xlink:href='#hamburger', x='0', y='0')
+	amp-sidebar#sidebar.floatMenu(layout='nodisplay', side='right')
+		a.float-right.mr-3(href="#", on='tap:sidebar.close', role='button', tabindex='0')
+			svg.closeMenu(viewbox='0 0 80 80')
+				use(xlink:href='#closeMenu', x='0', y='0')
+		//-amp-img.amp-img(src='/images/star/rating_on.png', width='20', height='20', alt='close sidebar', on='tap:sidebar.close', role='button', tabindex='0')
+		//-.amp-close-image
+		ul.listNav.list-unstyled.p-4
+			li: a.py-5(href='#') HOME
+			li: a.py-5(href='#') NEW BINGO SITES
+			li: a.py-5(href='#') NO DEPOSIT BINGO SITES
+			li: a.py-5(href='#') £5 DEPOSIT BINGO SITES
+			li: a.py-5(href='#')
+				| BINGO NETWORKS
+				ul.list-unstyled
+					li: a(href='#') Brigend Bingo Sites
+					li: a(href='#') Cassava Bingo Sites
+					li: a(href='#') Cozy Games Bingo Sites
+					li: a(href='#') Deal or No Deal Bingo Sites
+					li: a(href='#') Dragonfish Bingo Sites
+					li: a(href='#') Gamesys Bingo Sites
+					li: a(href='#') Microgaming Bingo Sites
+					li: a(href='#') Virtue Fusion Bingo Site
+
+			li: a.py-5(href='#')
+				| PAYMENT METHOD
+				ul.list-unstyled
+					li: a(href='#') Paypal Bingo Sites
+					li: a(href='#') Paysafecard Bingo Sites (formerly Ukash)
+					li: a(href='#') Pay by Phone Bingo Sites
+
+
+			li: a.py-5(href='#') BINGO REVIEWS
+			li: a.py-5(href='#') NEWS
+			li: a.py-5(href='#') BLOG
+			li: a.py-5(href='#') BEST SLOTS SITES
+
+			li: a.py-5(href='#') ABOUT
+			li: a.py-5(href='#') CONTACT
+			li: a.py-5(href='#') DISCLAIMER
+			
+block footer
+	//-footer
+		//.footer-container.subscribe-box.p-4
+			.d-flex.align-items-center.flex-column.flex-md-row.g1__s1.justify-content-around
+				.c2.d-flex.justify-content-center
+					h2 Get £1000 in bonus offers
+				.c1.d-flex.flex-column.align-items-center
+					input#register.subscribe-box__email(type='email', placeholder='Enter your email')
+					input#c4(type='checkbox', name='cc')
+					label.terms-conditions(for='c4')
+						span
+						| I have read the
+						a.pl-1.font-italic(href='') Terms & Conditions
+					button.btn.btn-send(type='button') SUBMIT
+		.footer-sites
+			.d-flex.flex-column.flex-sm-row.flex-wrap.justify-content-around.bg-p.container.pt-4
+				.p-2.scale3
+					h2.color-s £5 Deposit Sites
+					hr.title-underline
+					ul.d-flex.flex-column.list-unstyled
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/paddy-power-bingo/')
+								span.footer-title Paddy Power Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/vernons-bingo/')
+								span.footer-title Vernons Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/rewind-bingo/')
+								span.footer-title Rewind Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/betfair-bingo/')
+								span.footer-title Betfair Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/kingdom-of-bingo/')
+								span.footer-title Kingdom of Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/treasure-bingo/')
+								span.footer-title Treasure Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/iceland-bingo/')
+								span.footer-title Iceland Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/gala-bingo/')
+								span.footer-title Gala Bingo
+				.p-2.scale3
+					h2.color-s New Bingo Sites
+					hr.title-underline
+					ul.d-flex.flex-column.list-unstyled
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/bringo-bingo/')
+								span.footer-title Bringo Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/lucy-bingo/')
+								span.footer-title Lucy Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/queen-bee-bingo/')
+								span.footer-title Queen Bee Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/bingoroo/')
+								span.footer-title Bingoroo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/real-deal-bingo/')
+								span.footer-title Real Deal Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/palace-bingo/')
+								span.footer-title Palace Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/plush-bingo/')
+								span.footer-title Plush Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/aztec-bingo/')
+								span.footer-title Aztec Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/zoes-bingo/')
+								span.footer-title Zoe’s Bingo
+				.p-2.scale3
+					h2.color-s Player Favourites
+					hr.title-underline
+					ul.d-flex.flex-column.list-unstyled
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/sun-bingo/')
+								span.footer-title Sun Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/costa-bingo/')
+								span.footer-title Costa Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/gala-bingo/')
+								span.footer-title Gala Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/wink-bingo/')
+								span.footer-title Wink Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/mecca-bingo/')
+								span.footer-title Mecca Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/heart-bingo/')
+								span.footer-title Heart Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/kitty-bingo-2/')
+								span.footer-title Kitty Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/bet365-bingo/')
+								span.footer-title Bet365 Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/bgo/')
+								span.footer-title bgo Bingo
+				.p-2.scale3
+					h2.color-s No Deposit Bingo Sites
+					hr.title-underline
+					ul.d-flex.flex-column.list-unstyled
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/bingo-liner/')
+								span.footer-title Jackpot Liner
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/rewind-bingo/')
+								span.footer-title Rewind Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/costa-bingo/')
+								span.footer-title Costa Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/treasure-bingo/')
+								span.footer-title Treasure Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/kingdom-of-bingo/')
+								span.footer-title Kingdom of Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/mfortune/')
+								span.footer-title mFortune Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/lucky-pants-bingo/')
+								span.footer-title Lucky Pants Bingo
+						li
+							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/32redbingo/')
+								span.footer-title 32Red Bingo
+		.container.d-flex.flex-column.justify-content-center
+			.cols.py-4.text-center
+				a.ml-0(href='/about-us'): strong ABOUT US
+				a.ml-4(href='/contact'): strong CONTACT US
+		section.container
+			p.mx-auto.text-center All offers advertised on Best New Bingo Sites are subject to the individual sites terms and conditions. Over 18's only, wagering requirement may apply.
+			hr
+			.trust-pilot.d-flex.flex-wrap.justify-content-center
+				svg.footer-logo.mr-3(viewbox='0 0 261.85 261.85')
+					use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#igb', x='0', y='0')
+				a.mb-0(href='https://uk.trustpilot.com/review/www.bestnewbingosites.co.uk', target='_blank')
+					.amp-img.mb-2
+						amp-img.img-fluid(src="images/trust-pilot-logo.png", width="205" height="24" layout="responsive" alt='TrustPilot')
+					.amp-img
+						amp-img.img-fluid(src="images/4star.png", width="142" height="27" layout="responsive" alt='TrustPilot Ratings')
+				.w-100
+					p.mx-auto.text-center Nominee - Best website 2017 and 2016
+					hr
+		.container
+			.col.d-flex.justify-content-center
+				a(href='https://www.begambleaware.org/', target='_blank')
+					svg.mr-3.footer-logo(viewbox='0 0 205.9 70')
+						use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#gambleware18plusst', x='0', y='0')
+				a(href='http://www.gamcare.org.uk/', target='_blank')
+					svg.footer-logo(viewbox='0 0 62.3 70')
+						use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#game_care', x='0', y='0')
+			hr
+			.col.pb-5.mb-5
+				.d-flex.flex-row.flex-wrap.justify-content-center
+					a.mr-3(href='/sitemap'): strong Sitemap
+					a.mr-3(href='/terms-conditions'): strong Terms & Conditions
+					a.mr-3(href='/privacy-policy'): strong Privacy policy
+					a.mr-3(href='/responsible-gambling'): strong Responsible gambling
+				p.small.text-center.pt-3 Copyright Best New Bingo Sites 2017. All rights reserved.
+			//-.d-flex.flex-column.flex-lg-row.g1.container
+				.col.d-flex.flex-column.align-items-center.align-items-lg-start
+					.d-flex.my-4.my-lg-0
+						a.ml-0(href='/about-us'): strong ABOUT US
+						a.ml-4(href='/contact'): strong CONTACT US
+					p
+						| All offers advertised on Best New Bingo Sites are subject to the individual sites terms and conditions. Over 18's only, wagering requirement may apply.
+				.col.d-flex.flex-first.flex-lg-unordered.justify-content-center.justify-content-lg-end.trust-pilot
+					a.mb-0(href='https://uk.trustpilot.com/review/www.bestnewbingosites.co.uk', target='_blank')
+						.amp-img
+							amp-img.img-fluid(src="images/trust-pilot-logo.png", width="205" height="24" layout="responsive" alt='TrustPilot')
+						.amp-img
+							amp-img.img-fluid(src="images/4star.png", width="142" height="27" layout="responsive" alt='TrustPilot Ratings')
+						//-- TrustBox widget - Micro Review Count
+						//-- .trustpilot-widget(data-locale='en-GB', data-template-id='5419b6a8b0d04a076446a9ad', data-businessunit-id='5912e2880000ff0005a22e3e', data-style-height='20px', data-style-width='100%', data-theme='light', style='position: relative;')
+							iframe(frameborder='0', scrolling='no', title='Customer reviews powered by Trustpilot', src='https://widget.trustpilot.com/trustboxes/5419b6a8b0d04a076446a9ad/index.html?locale=en-GB&templateId=5419b6a8b0d04a076446a9ad&businessunitId=5912e2880000ff0005a22e3e&styleHeight=20px&styleWidth=100%25&theme=light', style='position: relative; height: 20px; width: 100%; border-style: none; display: block; overflow: hidden;')
+						//- End TrustBox widget
+		//-.legal-logos.py-5
+			.d-flex.flex-column.flex-md-row.g1.g1__footer-logos.container
+				.scale2.d-flex.align-items-center
+					svg.footer-logo.mr-3(viewbox='0 0 261.85 261.85')
+						use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#igb', x='0', y='0')
+					p Nominee - Best website 2017 and 2016
+				.scale2.d-flex.justify-content-md-end
+					a(href='https://www.begambleaware.org/', target='_blank')
+						svg.mr-3.footer-logo(viewbox='0 0 205.9 70')
+							use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#gambleware18plusst', x='0', y='0')
+					a(href='http://www.gamcare.org.uk/', target='_blank')
+						svg.footer-logo(viewbox='0 0 62.3 70')
+							use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#game_care', x='0', y='0')
+			.container
+				hr.footer-underline
+			
+			

@@ -1,0 +1,52 @@
+// stylelint-disable declaration-no-important
+
+//
+// Text
+//
+
+// Alignment
+
+.text-justify  { text-align: justify /*i*/; }
+.text-nowrap   { white-space: nowrap /*i*/; }
+.text-truncate { @include text-truncate; }
+
+// Responsive alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text#{$infix}-left   { text-align: left /*i*/; }
+    .text#{$infix}-right  { text-align: right /*i*/; }
+    .text#{$infix}-center { text-align: center /*i*/; }
+  }
+}
+
+// Transformation
+
+.text-lowercase  { text-transform: lowercase /*i*/; }
+.text-uppercase  { text-transform: uppercase /*i*/; }
+.text-capitalize { text-transform: capitalize /*i*/; }
+
+// Weight and italics
+
+.font-weight-light  { font-weight: $font-weight-light /*i*/; }
+.font-weight-normal { font-weight: $font-weight-normal /*i*/; }
+.font-weight-bold   { font-weight: $font-weight-bold /*i*/; }
+.font-italic        { font-style: italic /*i*/; }
+
+// Contextual colors
+
+.text-white { color: #fff /*i*/; }
+
+@each $color, $value in $theme-colors {
+  @include text-emphasis-variant(".text-#{$color}", $value);
+}
+
+.text-muted { color: $text-muted /*i*/; }
+
+// Misc
+
+.text-hide {
+  @include text-hide();
+}

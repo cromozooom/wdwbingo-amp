@@ -1,0 +1,52 @@
+.titleSection
+	color: $secondary
+.lightBg,
+.newsGridContainer
+	background: lighten($secondary, 42%)
+.newsGrid
+	list-style: none
+	padding: 0
+	margin: 0
+	li
+		padding: .5rem
+		*
+			background: white
+		hr
+			width: 100%
+			height: 5px
+			background: red
+			display: block
+			margin: 1rem 0 0 0
+			padding: 0
+			//border: 5px solid $secondary  
+	.date, .title, a
+		padding: 0 1rem
+	.title
+		color: $primary
+	&.half
+		li
+			width: 100%
+
+@include media-breakpoint-up(xs)
+	.newsGrid
+		&.half
+			li
+				width: 100%
+
+@include media-breakpoint-up(sm)
+	.newsGrid
+		&.half
+			li
+				width: 48%
+			li:nth-child(odd)
+				margin-right: 4%
+@include media-breakpoint-up(md)
+	.newsGrid
+		&.half
+			width: 50%
+			li
+				width: 48%
+			li:nth-child(odd)
+				margin-right: 4%
+//@include media-breakpoint-up(lg)
+//@include media-breakpoint-up(xl)

@@ -1,0 +1,62 @@
+.company-logo
+	.amp-img
+		background: desaturate(lighten(#FC155C, 35%), 30%)
+		// #ffe8ef
+
+.related--bingos
+	h1
+		font-size: 1.3rem
+			
+	
+.offer-card__strip
+	background: #FC155C
+	display: block
+	//margin: auto
+	position: relative
+	text-decoration: none
+	background: $pink
+	color: $indigo
+	border-radius: 5px
+	h2
+		color: #ffffff
+		font-size: 1rem
+	&:after
+		bottom: 100%
+		left: 50%
+		border: solid transparent
+		content: " "
+		height: 0
+		width: 0
+		position: absolute
+		pointer-events: none
+		border-bottom-color: #FC155C
+		border-width: 10px
+		margin-left: -10px
+.related--bingos
+	p.terms
+		margin-top: .5rem 
+		color: $gray-500
+		line-height: .8rem
+.offer-card--footer
+	border-bottom: 3px solid $pink
+	background: lighten($indigo, 60%)
+	li
+		background: url(images/bullet.png) 10px 8px no-repeat
+		padding-left: 30px
+		margin-top: 10px
+
+.title-underline
+	border-top: 8px solid #FC155C
+	font-size: 1.8rem
+	margin-top: 0
+
+// @include media-breakpoint-up(xs)
+// @include media-breakpoint-up(sm)
+//@include media-breakpoint-up(md)
+@include media-breakpoint-up(lg)
+	.related--bingo
+		//border: 1px solid red
+		max-width: 50%
+
+
+//@include media-breakpoint-up(xl)

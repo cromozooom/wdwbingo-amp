@@ -1,0 +1,308 @@
+mixin html(amp)
+	if amp
+		html(⚡, lang='en')
+			block
+	else
+		html(lang='en')
+			block
+mixin star(color)
+	if color == "full"
+		li.star.list-inline-item.mr-0: amp-img(src="images/stars/fstar.png" width="20" height="20" layout="responsive")
+	if color == "empty"
+		li.star.list-inline-item.mr-0: amp-img(src="images/stars/estar.png" width="20" height="20" layout="responsive")
+
+mixin newsard(title, date, img)
+	li.d-flex.flex-column.pb-3.mb-4
+		.amp-img
+			if img
+				amp-img.img-fluid(src="images/img0" + img + ".jpg", alt="", width="250" height="150" layout="responsive")
+			else
+				amp-img.img-fluid(src="images/imgDefault.jpg", alt="", width="250" height="150" layout="responsive")
+
+		p.mt-3.date= "December "+ date + " , 2017"
+		h4.title= title
+		a.mt-auto(href="#") more...
+
+mixin newsard1(title, date, img)
+	li.w-50
+		.d-flex.flex-column.pb-3.mb-4.px-3.newsGrid
+			.amp-img
+				if img
+					amp-img.img-fluid(src="images/img0" + img + ".jpg", alt="", width="250" height="150" layout="responsive")
+				else
+					amp-img.img-fluid(src="images/imgDefault.jpg", alt="", width="250" height="150" layout="responsive")
+
+			p.mt-3.date= "December "+ date + " , 2017"
+			h4.title= title
+			a.mt-auto(href="#") more...
+			hr
+
+mixin stars(count)
+	ul.company-rating-star.list-inline.m-0
+		if count == 0
+			+star("empty")
+			+star("empty")
+			+star("empty")
+			+star("empty")
+			+star("empty")
+		if count == 1
+			+star("full")
+			+star("empty")
+			+star("empty")
+			+star("empty")
+			+star("empty")
+		if count == 2
+			+star("full")
+			+star("full")
+			+star("empty")
+			+star("empty")
+			+star("empty")
+		if count == 3
+			+star("full")
+			+star("full")
+			+star("full")
+			+star("empty")
+			+star("empty")
+		if count == 4
+			+star("full")
+			+star("full")
+			+star("full")
+			+star("full")
+			+star("empty")
+		if count == 5
+			+star("full")
+			+star("full")
+			+star("full")
+			+star("full")
+			+star("full")
+
+mixin pagination
+	nav(aria-label='Page navigation')
+		ul.pagination.justify-content-end
+			li.page-item.disabled.text-right
+				a.page-link(href='#', tabindex='-1') &laquo; Previous
+			li.page-item.active
+				a.page-link(href='#') 1
+			li.page-item
+				a.page-link(href='#') 2
+			li.page-item
+				a.page-link(href='#') 3
+			li.page-item
+				a.page-link(href='#') 4
+			li.page-item
+				a.page-link(href='#') Next &raquo;
+
+mixin header(stars)
+	.container-fluid.company-head.px-0.py-2
+		.container.p-0.d-flex.flex-column.flex-lg-row
+			.row.p-0.m-0.ml-lg-2.d-flex.align-items-center.flex-lg-row
+				.col.company-logo.p-0.m-0
+					.amp-img
+						amp-img.img-fluid(src="images/" + casino.identity.logo, width="50" height="50" layout="responsive")
+				.col.company-title.pl-2.text-right.text-lg-left
+					h1: a(href="#")= casino.title
+					//-+stars(stars)
+					a(href="#"): small Dragon Fish
+
+			.row.d-flex.justify-content-center.flex-md-column.ml-lg-auto.mr-lg-2
+				.mx-auto.mr-lg-2.my-3
+					a.mr-4(href="#") Write a review
+					a.btn.btn-primary(href="#") Play Now
+				.mx-auto.mr-lg-2.mt-2.text-center.text-lg-right
+					h2: a.my-2(href="#")= casino.offer.body
+		small.d-block.w-100.px-4.text-center= casino.offer.terms
+		block
+
+mixin offer
+	each bingor, index in related
+		.container.p-0.py-3.related--bingo
+			.row.p-0.m-0.ml-lg-2.d-flex.align-items-center.flex-lg-row
+				.col.company-logo.p-0.m-0
+					.amp-img(id= "bg" + index)
+						amp-img.img-fluid(src="images/" + bingor.identity.logo, width="50" height="50" layout="responsive")
+				.col.company-title.pl-2.text-right.text-lg-left
+					h1: a(href="#")= bingor.title
+					//- +stars(stars)
+					a(href="#"): small Dragon Fish
+			small.d-block.w-100.p-3= bingor.description.short
+			.offer-card__strip.mx-3
+				h2.text-center.p-3= bingor.offer.body
+				//-svg(viewBox="0 0 110 110")
+					use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrowBNBS" x="0" y="0")
+				.offer-card--footer.p-3
+					if bingor.offer.list
+						ul.list-unstyled
+							- max = 0;
+							each atr, index in bingor.offer.list
+								while max < 2
+									li= atr + max
+									- max++
+								//- li Dragonfish Bingo Software
+								//- li Deposit For Free Bingo Tickets & Daily Free Spins
+								//- li No Wagering Requirements
+								//- li Winnings Paid In Cash
+						hr
+					.d-flex
+						.mx-auto
+							a.mr-4(href="#") Write a review
+							a.btn.btn-primary(href="#") Play Now
+			p.terms.text-center.px-3: small= bingor.offer.terms
+		//-.row.d-flex.justify-content-center.flex-md-column.ml-lg-auto.mr-lg-2
+			.mx-auto.mr-lg-2.my-3
+				a.mr-4(href="#") Write a review
+				a.btn.btn-primary(href="#") Play Now
+			.mx-auto.mr-lg-2.mt-2.text-center.text-lg-right
+				h2: a.my-2(href="#")= casino.offer.body
+mixin related(stars, title)
+	.px-3
+		h2.color.mt-4.color-s.s-l= title
+		hr.title-underline
+	.container-fluid.related--bingos.px-0
+		.container.p-0.d-flex.flex-wrap
+			+offer
+		
+mixin descriptionHero(color)
+	if color === "dark"
+		.row.description.description--dark.p-4.d-flex.flex-column.flex-lg-row
+			.col.m-0.p-3.px-lg-4
+				h3= casino.title + " review"
+				p= casino.description.short
+			.col.m-0.p-3.px-lg-4
+				a(href="#")
+					.amp-img
+						amp-img.img-fluid(src="images/" + casino.identity.screen, width="800" height="600" layout="responsive" alt=casino.title + " screenshot" )
+					small.d-block.text-center= casino.title + " screenshot"
+	if color === "light"
+		.row.description.description--light.p-4.d-flex.flex-column.flex-lg-row
+			.col.m-0.p-3.px-lg-4
+				h3= casino.title + " review"
+				p= casino.description.short
+			.col.m-0.p-3.px-lg-4
+				a(href="#")
+					.amp-img
+						amp-img.img-fluid(src="images/" + casino.identity.screen, width="800" height="600" layout="responsive" alt=casino.title + " screenshot" )
+					small.d-block.text-center= casino.title + " screenshot"
+	
+	if color === "white"
+		.row.description.description--white.p-4.d-flex.flex-column.flex-lg-row
+			.col.m-0.p-3.px-lg-4
+				h3= casino.title + " review"
+				p= casino.description.short
+			.col.m-0.p-3.px-lg-4
+				a(href="#")
+					.amp-img
+						amp-img.img-fluid(src="images/" + casino.identity.screen, width="800" height="600" layout="responsive" alt=casino.title + " screenshot" )
+					small.d-block.text-center= casino.title + " screenshot"
+
+mixin description(color)
+	section.container.pt-3
+		if color === "dark"
+			.row.description.description--dark
+				.col.m-0.p-3
+					h4="Description"
+					p= casino.description.long
+				
+		if color === "light"
+			.row.description.description--light
+				.col.m-0.p-3
+					h4="Description"
+					p= casino.description.long
+		
+		if color === "white"
+			.row.description.description--white
+				.col.m-0.p-3
+					h4="Description"
+					p= casino.description.long
+
+mixin metas
+	.metas.p-3.description--light 
+		h4.mt-3.mb-2= casino.title + " Atributes"
+		hr
+		dl.d-flex.flex-column.flex-lg-row.flex-wrap
+			//.p-2
+			each meta in casino.metas
+				dt= meta.title
+				dd= meta.desc
+
+mixin wysiwyg(bg)
+	.container.p-0(class= "bg-" + bg)
+		.wysiwyg.p-3.py-5.mx-auto
+			h1 New Slot Sites 2017
+			hr.title-underline
+			ol
+				li
+					a(href='#WHO') Who is behind all these new slot sites?
+				li
+					a(href='#WHY') Why play at a new slot site?
+				li
+					a(href='#FUTURE') New slot sites – a look into the future
+			h3
+				a(name='WHO')
+				| Who is behind all these new slot sites?
+			p
+				| Several new slot sites and casinos launch in the UK every single month and these can be:
+			ul
+				li
+					strong Completely new operators
+					|  – these will usually go for a “skin” site where the casino software, management and licensing is supplied by  a white label provider such as Nektan or Progress Play.
+				li
+					strong Operators who already run other types of gambling sites
+					|  (such as bingo or sports) and want to expand into the slots / casino business (which can be easier to run as there’s no need for chat hosts, for instance).  Such an operator will already have experience of looking after VIPs etc.
+				li
+					strong Existing slots/casino operators
+					|  launching additional sites. These operators already know how to make things run smoothly and if they have lots of skins they will probably also have lots of staff to look after players.
+				li
+					strong Overseas slots/casino operators
+					|  expanding into the UK market after obtaining a UK GC licence. Again, these operators already have lots of experience of running slots/casino sites – and as they must recently have passed the rigorous vetting procedures for a UK licence, players can feel confident that all is as it should be.
+			h3
+				a(name='WHY')
+				| Why play at a new slot site?
+			p
+				| Many players move on to new sites because they want to claim a fresh welcome bonus offer but there are other reasons why you might want to try out somewhere new.
+			p
+				strong Ongoing/regular bonus & free spins offers
+				|  – it’s not all about the welcome bonus. Regular/ongoing bonus and free spins offers give players the opportunity to try out different slots.
+			p
+				strong Wagering requirements, caps on winnings etc
+				|  – Players may seek to move on if they consider wagering requirements to be too onerous or if there are too many restrictions on what can be won from bonus play
+			p
+				strong Exclusive & network promotions
+				|  – Promotions such as tournaments, raffles and sharepots make play more interesting and a new site that offers these may be very attractive to players (especially if they are not available anywhere else)
+			p
+				strong Playability on different devices
+				|  – A player with a new phone or tablet may be looking for a site that works better on the latest devices.
+			p
+				strong Selection of slots
+				|   – Players may move on in search of a particular slot they want to play.  Perhaps the site they currently play at doesn’t offer any slots from that provider, or they may be slow to add new releases.
+			p
+				strong Availability of progressive jackpots
+				|  – Not all slot/casino sites offer these.  For example, it is quite common for IGT slots to be on offer but without the Megajackpots collection.  Other sought after progressive jackpots include the Jackpot King games, Playtech’s Age of the Gods, Microgaming’s Mega Moolah and Netent’s Mega Fortune games.
+			h3
+				a(name='FUTURE')
+				| New slot sites – a look into the future
+			p
+				| 2017 is certainly an interesting time for slots operators due to recent action by the UK Gambling Commission over concerns that some slot games appeal particularly to children – for example, those with a fairytale, cartoon or superhero theme.  Although not all operators have yet reacted to this it seems very likely that in the future, images promoting such slots will all have to be age gated – so only visible to players who have already signed up and undergone age verification.
+			p
+				| This is bound to result in changes to player promotions such as free spins offers and slots with a more adult theme may increase in popularity after featuring in promotions more.
+
+mixin top(no, title, software , offer, depozit)
+	li.line.d-flex.flex-column.m-0
+		.content.row.py-1
+			.col-1.text-center= no
+			.col.d-none.d-lg-block
+				h3.title-bingo= title
+				+stars(4)
+			.col
+				.d-block.d-lg-none
+					h3.title-bingo= title
+					+stars(4)
+				h3= offer
+				p= depozit
+				a.d-block.d-lg-none.ml-auto.btn.btn-primary(href="#") PLAY NOW
+			.col.d-none.d-lg-block
+				small= software
+			.col.d-none.d-lg-block.text-right
+				.top--cta.w-100
+					a.btn.btn-primary.mr-2(href="#") PLAY NOW
+		
+		.text-muted.terms-font.text-center.py-2 * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly

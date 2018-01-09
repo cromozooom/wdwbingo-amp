@@ -1,0 +1,75 @@
+.wysiwyg
+	max-width: 45rem
+.color-p
+	color: $primary
+.color-s
+	color: $secondary
+
+.color-w
+	color: $white
+p
+	max-width: 45rem
+
+.star:not(:last-child)
+	margin-right: 0
+.bg-p
+	background: darken($primary, 15%)
+	color: $white
+	h1, h2, h3, h4, h5, h6
+		color: $secondary
+	a
+		color: $secondary
+
+.bg-s
+	background: lighten($secondary, 42%)
+	color: $dark
+	h1, h2, h3, h4, h5, h6, a
+		color: $secondary
+	//a
+	//	color: $primary
+
+
+//.bg-s
+//	background: $secondary
+.s-s
+	font-size: .8rem
+.s-m
+	font-size: 1.1rem
+.s-l
+	font-size: 1.4rem
+.s-xl
+	font-size: 2rem
+.s-xxl
+	font-size: 2.6rem
+.scale3, .scale2.scale1
+	width: 100%
+
+.relatedArticle
+	a
+		color: $primary
+	.date
+		color: $dark
+//@include media-breakpoint-up(xs)
+//@include media-breakpoint-up(sm)
+//@include media-breakpoint-up(md)
+@include media-breakpoint-up(lg)
+	.scale3, .scale2
+		width: 50%
+@include media-breakpoint-up(xl)
+	.scale3
+		width: 25%
+//	@include media-breakpoint-up(xs)
+//		body
+//			background: lighten(red, 40%)
+//	@include media-breakpoint-up(sm)
+//		body
+//			background: lighten(blue, 40%)
+//	@include media-breakpoint-up(md)
+//		body
+//			background: lighten(red, 40%)
+//	@include media-breakpoint-up(lg)
+//		body
+//			background: lighten(blue, 40%)
+//	@include media-breakpoint-up(xl)
+//		body
+//			background: lighten(red, 40%)

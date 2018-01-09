@@ -1,0 +1,56 @@
+// stylelint-disable declaration-no-important
+
+//
+// Utilities for common `display` values
+//
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .d#{$infix}-none         { display: none /*i*/; }
+    .d#{$infix}-inline       { display: inline /*i*/; }
+    .d#{$infix}-inline-block { display: inline-block /*i*/; }
+    .d#{$infix}-block        { display: block /*i*/; }
+    .d#{$infix}-table        { display: table /*i*/; }
+    .d#{$infix}-table-row    { display: table-row /*i*/; }
+    .d#{$infix}-table-cell   { display: table-cell /*i*/; }
+    .d#{$infix}-flex         { display: flex /*i*/; }
+    .d#{$infix}-inline-flex  { display: inline-flex /*i*/; }
+  }
+}
+
+
+//
+// Utilities for toggling `display` in print
+//
+
+.d-print-block {
+  display: none /*i*/;
+
+  @media print {
+    display: block /*i*/;
+  }
+}
+
+.d-print-inline {
+  display: none /*i*/;
+
+  @media print {
+    display: inline /*i*/;
+  }
+}
+
+.d-print-inline-block {
+  display: none /*i*/;
+
+  @media print {
+    display: inline-block /*i*/;
+  }
+}
+
+.d-print-none {
+  @media print {
+    display: none /*i*/;
+  }
+}

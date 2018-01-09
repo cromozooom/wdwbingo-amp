@@ -1,0 +1,1 @@
+test = () => alert("hello from custom2");

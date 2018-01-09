@@ -1,0 +1,43 @@
+.company-logo
+	border-radius: 0% 50% 50% 0%
+	overflow: hidden
+
+.company
+	&-head
+		background: white
+		.container
+			//border: 1px solid red
+		h1
+			font-size: 1.2rem
+			font-weight: 600
+		h2
+			font-size: 1.2rem
+		.btn
+			border-radius: 4rem	
+	&-logo
+		max-width: 100px
+		//background: red
+		.amp-img
+			width: 100px
+			height: 100px
+	&-title
+		//border: 1px solid red
+	&-rating-star
+		li
+			width: 20px
+			height: 20px
+			*
+				max-width: 20px
+				height: 20px
+
+.footerCta
+	background: lighten($pink, 35%)
+
+//@include media-breakpoint-up(xs)
+//@include media-breakpoint-up(sm)
+//@include media-breakpoint-up(md)
+@include media-breakpoint-up(lg)
+	.company-logo
+		border-radius: 50%
+
+//@include media-breakpoint-up(xl)
