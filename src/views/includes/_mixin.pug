@@ -316,3 +316,20 @@ mixin top(no, title, software , offer, depozit)
 mixin image(myClass, path, w, h )
 	.amp-img
 		amp-img(class= myClass src= path, alt="", width= w height= h layout="responsive")
+
+mixin newsInfo(comments)
+	ul.info.d-flex.flex-wrap.list-unstyle.pl-0.mb-0
+		li.mr-3.d-flex.align-items-center
+			svg.info-ico(viewbox='0 0 100 100')
+				use(xlink:href='#date', x='0', y='0')
+			span November 14, 2017
+		li.mr-3.d-flex.align-items-center
+			svg.info-ico(viewbox='0 0 100 100')
+				use(xlink:href='#comments', x='0', y='0')
+			span= comments + " comments"
+		li.mr-3.d-flex.align-items-center
+			a.d-flex.align-items-center(href="#")
+				svg.info-ico(viewbox='0 0 100 100')
+					use(xlink:href='#arrow', x='0', y='0')
+				span Read more
+	hr.mt-0
