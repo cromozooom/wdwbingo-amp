@@ -40,7 +40,23 @@
 	display: inline-block
 
 .footerSite
-	background: $gray-500
+	border-top: 10px solid darken($gray-500, 0%)
+	background: darken($gray-500, 22%)
+	.title
+		color: $secondary
 	&List
 		a
 			color: white
+			font-family: $sans
+	&-row
+		background: darken($gray-500, 35%)
+		a
+			color: $gray-500
+	.copyright
+		color: lighten($gray-500, 10%)
+
+.footer--img
+	.col img
+		height: 25px
+		display: block
+	

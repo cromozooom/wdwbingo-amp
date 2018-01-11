@@ -3,8 +3,8 @@ block vars
 	- amp = true
 	//- dev = false
 	//- dev = true
-	- inline = false
 	- inline = true
+	- inline = false
 
 block meta
 	meta(charset='UTF-8')
@@ -88,144 +88,56 @@ block header
 			li: a.py-5(href='#') ABOUT
 			li: a.py-5(href='#') CONTACT
 			li: a.py-5(href='#') DISCLAIMER
-			
+mixin colLinksFooter(title)
+			.col-12.col-md-6.col-lg-3
+				h3.mt-4.title= title
+				hr.title-underline
+				ul.d-flex.flex-column.list-unstyled.footerSiteList
+					li
+						a.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/paddy-power-bingo/')
+							span.footer-title Paddy Power Bingo
+					li
+						a.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/vernons-bingo/')
+							span.footer-title Vernons Bingo
+					li
+						a.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/rewind-bingo/')
+							span.footer-title Rewind Bingo
+					li
+						a.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/betfair-bingo/')
+							span.footer-title Betfair Bingo
+					li
+						a.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/kingdom-of-bingo/')
+							span.footer-title Kingdom of Bingo
+					li
+						a.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/treasure-bingo/')
+							span.footer-title Treasure Bingo
+					li
+						a.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/iceland-bingo/')
+							span.footer-title Iceland Bingo
+					li
+						a.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/gala-bingo/')
+							span.footer-title Gala Bingo
 block footer
-	footer.footerSite
-		//.footer-container.subscribe-box.p-4
-			.d-flex.align-items-center.flex-column.flex-md-row.g1__s1.justify-content-around
-				.c2.d-flex.justify-content-center
-					h2 Get £1000 in bonus offers
-				.c1.d-flex.flex-column.align-items-center
-					input#register.subscribe-box__email(type='email', placeholder='Enter your email')
-					input#c4(type='checkbox', name='cc')
-					label.terms-conditions(for='c4')
-						span
-						| I have read the
-						a.pl-1.font-italic(href='') Terms & Conditions
-					button.btn.btn-send(type='button') SUBMIT
-		.footer-sites
-			.d-flex.flex-column.flex-sm-row.flex-wrap.justify-content-around.bg-p.container.pt-4
-				.p-2.scale3
-					h2.color-s BEST TOP 5 BINGO SITES
-					hr.title-underline
-					ul.d-flex.flex-column.list-unstyled.footerSiteList
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/paddy-power-bingo/')
-								span.footer-title Paddy Power Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/vernons-bingo/')
-								span.footer-title Vernons Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/rewind-bingo/')
-								span.footer-title Rewind Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/betfair-bingo/')
-								span.footer-title Betfair Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/kingdom-of-bingo/')
-								span.footer-title Kingdom of Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/treasure-bingo/')
-								span.footer-title Treasure Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/iceland-bingo/')
-								span.footer-title Iceland Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/gala-bingo/')
-								span.footer-title Gala Bingo
-				.p-2.scale3
-					h2.color-s LATEST BINGO SITES
-					hr.title-underline
-					ul.d-flex.flex-column.list-unstyled.footerSiteList
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/bringo-bingo/')
-								span.footer-title Bringo Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/lucy-bingo/')
-								span.footer-title Lucy Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/queen-bee-bingo/')
-								span.footer-title Queen Bee Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/bingoroo/')
-								span.footer-title Bingoroo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/real-deal-bingo/')
-								span.footer-title Real Deal Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/palace-bingo/')
-								span.footer-title Palace Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/plush-bingo/')
-								span.footer-title Plush Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/aztec-bingo/')
-								span.footer-title Aztec Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/zoes-bingo/')
-								span.footer-title Zoe’s Bingo
-				.p-2.scale3
-					h2.color-s PLAYER FAVOURITES
-					hr.title-underline
-					ul.d-flex.flex-column.list-unstyled.footerSiteList
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/sun-bingo/')
-								span.footer-title Sun Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/costa-bingo/')
-								span.footer-title Costa Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/gala-bingo/')
-								span.footer-title Gala Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/wink-bingo/')
-								span.footer-title Wink Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/mecca-bingo/')
-								span.footer-title Mecca Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/heart-bingo/')
-								span.footer-title Heart Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/kitty-bingo-2/')
-								span.footer-title Kitty Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/bet365-bingo/')
-								span.footer-title Bet365 Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/bgo/')
-								span.footer-title bgo Bingo
-				.p-2.scale3
-					h2.color-s LINKS	
-					hr.title-underline
-					ul.d-flex.flex-column.list-unstyled.footerSiteList
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/bingo-liner/')
-								span.footer-title Jackpot Liner
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/rewind-bingo/')
-								span.footer-title Rewind Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/costa-bingo/')
-								span.footer-title Costa Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/treasure-bingo/')
-								span.footer-title Treasure Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/kingdom-of-bingo/')
-								span.footer-title Kingdom of Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/mfortune/')
-								span.footer-title mFortune Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/lucky-pants-bingo/')
-								span.footer-title Lucky Pants Bingo
-						li
-							a.d-flex.flex-row.p-1.align-items-center.color-w(href='https://www.bestnewbingosites.co.uk/bingo-site/32redbingo/')
-								span.footer-title 32Red Bingo
-		.container.d-flex.flex-column.justify-content-center
-			.cols.py-4.text-center.footerSiteList
-				a.ml-0(href='/about-us'): strong HOME
-				a.ml-4(href='/about-us'): strong ABOUT
-				a.ml-4(href='/about-us'): strong CONTACT
-				a.ml-4(href='/contact'): strong DISCLAMER
+	footer.footerSite.container-fluid.p-0
+		.container
+			.row.d-flex.flex-wrap
+				+colLinksFooter("BEST TOP 5 BINGO SITES")
+				+colLinksFooter("LATEST BINGO SITES")
+				+colLinksFooter("PLAYER FAVOURITES")
+				+colLinksFooter("Links")
+		.container.footerSite-row.d-flex.flex-column.justify-content-center.py-4
+			.row
+				.col.text-center.footerSiteList
+					a.ml-0(href='/about-us'): strong HOME
+					a.ml-4(href='/about-us'): strong ABOUT
+					a.ml-4(href='/about-us'): strong CONTACT
+					a.ml-4(href='/contact'): strong DISCLAMER
+				.col
+					+image("img-fluid", "images/gc-logo.png", 125, 25)
+				.col
+					+image("img-fluid", "images/begambleaware_logo.png", 125, 25)
+				.col-1
+					+image("img-fluid", "images/18-icon.png", 43, 40)
+			.row
+				.col.py-3
+					p.text-center.copyright Copyright © 2011- 2018 WDW Bingo
