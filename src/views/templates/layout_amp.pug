@@ -2,7 +2,7 @@ extends layout
 block vars
 	- amp = true
 	//- dev = false
-	//- dev = true
+	- dev = true
 	- inline = false
 	- inline = true
 
@@ -14,11 +14,20 @@ block meta
 
 block link
 	link(rel="canonical" href="hello-world.html")
-	//-script(async='', src='https://cdn.ampproject.org/v0.js')
-	//-script(async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
-	//-script(async='', custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js")
-	//-script(async='', custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js")
-	//-script(async='', custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js")
+	//- amp scripts for dev
+	if inline | dev
+		script(async='', src='https://cdn.ampproject.org/v0.js')
+		script(async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
+		script(async='', custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js")
+		script(async='', custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js")
+		script(async='', custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js")
+
+	//- amp scripts for prod
+	//- <script async='' src='https://cdn.ampproject.org/v0.js'></script>
+	//- <script async='' custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js'></script>
+	//- <script async='' custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+	//- <script async='' custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+	//- <script async='' custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
 
 	//- fonts
 	link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald")
@@ -32,7 +41,7 @@ block link
 	<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 	
 block header
-	//-.d-none
+	.d-none
 		include ../includes/svg/svg_BingoPage.pug
 	
 	

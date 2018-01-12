@@ -70,8 +70,8 @@ gulp.task('sass', function () {
 		//	stream: true
 		//}));
 });
-
-gulp.task('uncss' ,['build'] , function () {
+//  ,['build']
+gulp.task('uncss' , function () {
 	return gulp.src(paths.sass + '**/*.scss')
 		.pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
 		.pipe(uncss({
