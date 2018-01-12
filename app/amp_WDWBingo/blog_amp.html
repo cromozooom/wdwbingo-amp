@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html ⚡="⚡" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>trueIndex</title>
+    <link rel="canonical" href="hello-world.html">
+    <script async='', src='https://cdn.ampproject.org/v0.js'></script>
+    <script async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js'></script>
+    <script async='', custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+    <script async='', custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async='', custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <style amp-custom>@media print{*,*::before,*::after{text-shadow:none;-webkit-box-shadow:none;box-shadow:none}a,a:visited{text-decoration:underline}thead{display:table-header-group}tr{page-break-inside:avoid}p,h2,h3{orphans:3;widows:3}h2,h3{page-break-after:avoid}.badge{border:1px solid #000}.table{border-collapse:collapse}.table td,.table th{background-color:#fff}}*,*::before,*::after{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar;-webkit-tap-highlight-color:transparent}footer,nav,section{display:block}body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}hr{-webkit-box-sizing:content-box;box-sizing:content-box;height:0;overflow:visible}h1,h2,h3,h4,h5{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}ul{margin-top:0;margin-bottom:1rem}ul ul{margin-bottom:0}strong{font-weight:bolder}small{font-size:80%}a{color:#fb011e;text-decoration:none;background-color:transparent;-webkit-text-decoration-skip:objects}a:hover{color:#af0115;text-decoration:underline}a:not([href]):not([tabindex]){color:inherit;text-decoration:none}a:not([href]):not([tabindex]):focus,a:not([href]):not([tabindex]):hover{color:inherit;text-decoration:none}a:not([href]):not([tabindex]):focus{outline:0}svg:not(:root){overflow:hidden}a,[role="button"]{-ms-touch-action:manipulation;touch-action:manipulation}table{border-collapse:collapse}th{text-align:inherit}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}h1,h2,h3,h4,h5,.h3{margin-bottom:.5rem;font-family:"Oswald",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-weight:500;line-height:1.2;color:inherit}h1{font-size:2rem}h2{font-size:1.75rem}h3,.h3{font-size:1.5rem}h4{font-size:1.25rem}h5{font-size:1rem}hr{margin-top:1rem;margin-bottom:1rem;border:0;border-top:1px solid rgba(0,0,0,0.1)}small{font-size:80%;font-weight:400}.list-unstyled{padding-left:0;list-style:none}.list-inline{padding-left:0;list-style:none}.list-inline-item{display:inline-block}.list-inline-item:not(:last-child){margin-right:5px}.img-fluid{max-width:100%;height:auto}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width: 320px){.container{max-width:540px}}@media (min-width: 425px){.container{max-width:720px}}@media (min-width: 768px){.container{max-width:960px}}@media (min-width: 1024px){.container{max-width:1140px}}.container-fluid{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col-1,.col-12,.col,.col-md-4,.col-md-6,.col-lg-3,.col-lg-4,.col-xl-2{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px}.col{-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-1{-webkit-box-flex:0;-ms-flex:0 0 8.33333%;flex:0 0 8.33333%;max-width:8.33333%}.col-12{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}@media (min-width: 425px){.col-md-4{-webkit-box-flex:0;-ms-flex:0 0 33.33333%;flex:0 0 33.33333%;max-width:33.33333%}.col-md-6{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}}@media (min-width: 768px){.col-lg-3{-webkit-box-flex:0;-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-lg-4{-webkit-box-flex:0;-ms-flex:0 0 33.33333%;flex:0 0 33.33333%;max-width:33.33333%}}@media (min-width: 1024px){.col-xl-2{-webkit-box-flex:0;-ms-flex:0 0 16.66667%;flex:0 0 16.66667%;max-width:16.66667%}}.table{width:100%;max-width:100%;margin-bottom:1rem;background-color:transparent}.table th,.table td{padding:.75rem;vertical-align:top;border-top:1px solid #e9ecef}.table thead th{vertical-align:bottom;border-bottom:2px solid #e9ecef}.form-control::-webkit-input-placeholder{color:#868e96;opacity:1}.form-control:-ms-input-placeholder{color:#868e96;opacity:1}.form-control::-ms-input-placeholder{color:#868e96;opacity:1}.form-control::placeholder{color:#868e96;opacity:1}.btn{display:inline-block;font-weight:400;text-align:center;white-space:nowrap;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;-webkit-transition:background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;transition:background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;transition:background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;transition:background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out}.btn:focus,.btn:hover{text-decoration:none}.btn:focus{outline:0;-webkit-box-shadow:0 0 0 .2rem rgba(251,1,30,0.25);box-shadow:0 0 0 .2rem rgba(251,1,30,0.25)}.btn:disabled{opacity:.65}.btn:not([disabled]):not(.disabled):active{background-image:none}.btn-primary{color:#fff;background-color:#fb011e;border-color:#fb011e}.btn-primary:hover{color:#fff;background-color:#d50119;border-color:#c80118}.btn-primary:focus{-webkit-box-shadow:0 0 0 .2rem rgba(251,1,30,0.5);box-shadow:0 0 0 .2rem rgba(251,1,30,0.5)}.btn-primary:disabled{background-color:#fb011e;border-color:#fb011e}.btn-primary:not([disabled]):not(.disabled):active{color:#fff;background-color:#c80118;border-color:#bc0116;-webkit-box-shadow:0 0 0 .2rem rgba(251,1,30,0.5);box-shadow:0 0 0 .2rem rgba(251,1,30,0.5)}.btn-secondary{color:#111;background-color:orange;border-color:orange}.btn-secondary:hover{color:#fff;background-color:#d98c00;border-color:#cc8400}.btn-secondary:focus{-webkit-box-shadow:0 0 0 .2rem rgba(255,165,0,0.5);box-shadow:0 0 0 .2rem rgba(255,165,0,0.5)}.btn-secondary:disabled{background-color:orange;border-color:orange}.btn-secondary:not([disabled]):not(.disabled):active{color:#fff;background-color:#cc8400;border-color:#bf7c00;-webkit-box-shadow:0 0 0 .2rem rgba(255,165,0,0.5);box-shadow:0 0 0 .2rem rgba(255,165,0,0.5)}.btn-lg{padding:.5rem 1rem;font-size:1.25rem;line-height:1.5}.btn-sm{padding:.25rem .5rem;font-size:.875rem;line-height:1.5}.nav{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none}.card{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,0.125)}.card-body{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;padding:1.25rem}.card-title{margin-bottom:.75rem}.card-text:last-child{margin-bottom:0}.card-img-top{width:100%}.badge{display:inline-block;padding:.25em .4em;font-size:75%;font-weight:700;line-height:1;text-align:center;white-space:nowrap;vertical-align:baseline}@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)){}@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)){}@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)){}.d-none{display:none}.d-inline-block{display:inline-block}.d-block{display:block}.d-flex{display:-webkit-box;display:-ms-flexbox;display:flex}@media (min-width: 768px){.d-lg-none{display:none}.d-lg-block{display:block}}.flex-column{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}.justify-content-center{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.align-items-center{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.float-right{float:right}@supports ((position: -webkit-sticky) or (position: sticky)){}.w-100{width:100%}.h-100{height:100%}.m-0{margin:0}.mt-0{margin-top:0}.mr-0{margin-right:0}.mb-0{margin-bottom:0}.ml-0{margin-left:0}.mt-1{margin-top:.25rem}.mx-1{margin-right:.25rem}.mx-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.mr-3{margin-right:1rem}.ml-3{margin-left:1rem}.mt-4{margin-top:1.5rem}.mb-4{margin-bottom:1.5rem}.ml-4{margin-left:1.5rem}.p-0{padding:0}.pl-0{padding-left:0}.py-1{padding-top:.25rem}.py-1{padding-bottom:.25rem}.p-2{padding:.5rem}.py-2{padding-top:.5rem}.px-2{padding-right:.5rem}.py-2{padding-bottom:.5rem}.px-2{padding-left:.5rem}.py-3{padding-top:1rem}.py-3{padding-bottom:1rem}.p-4{padding:1.5rem}.py-4{padding-top:1.5rem}.pb-4,.py-4{padding-bottom:1.5rem}.py-5{padding-top:3rem}.py-5{padding-bottom:3rem}.mt-auto{margin-top:auto}.ml-auto{margin-left:auto}.text-right{text-align:right}.text-center{text-align:center}@media (min-width: 768px){.text-lg-left{text-align:left}}.text-muted{color:#868e96}.sans{font-family:"Oswald",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}.thead-secondary{background:orange}.btn{font-family:"Oswald",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;text-shadow:0px 1px rgba(0,0,0,0.3);color:#fff}.btn.btn-primary{color:#fff}.terms-font{font-size:.6rem;line-height:.8rem}.star{width:20px;height:20px}.star.list-inline-item:not(:last-child){margin-right:0}.company-rating-star{display:inline-block}.footerSite{border-top:10px solid #798992;background:#455055}.footerSite .title{color:orange}.footerSiteList a{color:white;font-family:"Oswald",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}.footerSite-row{background:#282e31}.footerSite-row a{color:#798992}.footerSite .copyright{color:#95a2a9}.info{font-family:"Oswald",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}.info-ico{width:20px;height:20px}.navbar__button{width:3rem;height:3rem;margin-top:.5rem}.logo{width:110px}.closeMenu{margin-top:.5rem;width:3rem;height:3rem}.nav{z-index:9999;height:4rem;line-height:4rem}.nav a.startButton{color:#fff;background:#e9ecee}#sidebar.floatMenu{background:#fb011e;color:#fff}#sidebar.floatMenu ul.listNav>li{width:100%;border-top:1px solid #c80118;padding:.8rem 0}#sidebar.floatMenu ul.listNav li:first-child{border-top:none}#sidebar.floatMenu ul.listNav li{font-weight:800}#sidebar.floatMenu ul.listNav li a{color:#fff}#sidebar.floatMenu ul.listNav li li{font-weight:400;padding:.5rem 0}#sidebar.floatMenu ul.listNav li li a{color:#fff}@media (min-width: 425px){#sidebar.floatMenu{width:20rem}}.badge{position:absolute;z-index:100;background:#fb011e;color:#fff;left:10px;top:10px;font-size:1.2rem}.card{position:relative;z-index:90}.ribbon-wrapper{width:85px;height:88px;overflow:hidden;position:absolute;top:-3px;right:-3px}.ribbon{font:bold 15px Sans-Serif;color:#333;text-align:center;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);position:relative;padding:7px 0;left:-5px;top:15px;width:120px;background-color:orange;color:#fff;-webkit-box-shadow:0px 0px 3px rgba(0,0,0,0.3);box-shadow:0px 0px 3px rgba(0,0,0,0.3);z-index:100}.card-body--offer{color:#fff;background:#fb011e}.card-body--offer-cta small{color:#fff}.ampTabContainer{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.tabButton{border:1px solid transparent;border-bottom:1px solid orange}.tabButton[selected]{outline:none;border:1px solid orange;border-bottom:none}amp-selector [option][selected]{cursor:auto;outline:0px solid rgba(0,0,0,0.7)}.tabButton{list-style:none;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;text-align:center;cursor:pointer}.tabContent{display:none;width:100%;-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;border:1px solid orange;border-top:none}.tabButton[selected]+.tabContent{display:block}.top--head{background:#fb011e;font-family:"Oswald",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#fff}.top .title-bingo{color:#798992}.top .line{border-bottom:1px solid red}.top--colorBlue{border:1px solid #337ab7}.top--colorBlue .top--head{background:#337ab7}.top--colorBlue .btn{background:#337ab7;border-color:#285f8f}.top--colorBlue .line{border-bottom:1px solid #337ab7}.top--primary{border:1px solid #fb011e}.top--primary .top--head{background:#fb011e}.top--primary .btn{background:#fb011e;border-color:#c80118}.top--primary .line{border-bottom:1px solid #fb011e}
+
+    </style><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <nav class="nav"><a class="logo ml-3 mt-2" href="/">
+        <svg class="logo" viewbox="0 0 188 80">
+          <use xlink:href="#logo" x="0" y="0"></use>
+        </svg></a><a class="ml-auto px-2 float-right startButton" on="tap:sidebar.toggle"><strong>
+          <svg class="navbar__button" viewbox="0 0 110 110">
+            <use xlink:href="#hamburger" x="0" y="0"></use>
+          </svg></strong></a></nav>
+    <amp-sidebar class="floatMenu" id="sidebar" layout="nodisplay" side="right"><a class="float-right mr-3" href="#" on="tap:sidebar.close" role="button" tabindex="0">
+        <svg class="closeMenu" viewbox="0 0 80 80">
+          <use xlink:href="#closeMenu" x="0" y="0"></use>
+        </svg></a>
+      <ul class="listNav list-unstyled p-4">
+        <li><a class="py-5" href="#">HOME</a></li>
+        <li><a class="py-5" href="#">NEW BINGO SITES</a></li>
+        <li><a class="py-5" href="#">NO DEPOSIT BINGO SITES</a></li>
+        <li><a class="py-5" href="#">£5 DEPOSIT BINGO SITES</a></li>
+        <li><a class="py-5" href="#">BINGO NETWORKS
+            <ul class="list-unstyled">
+              <li><a href="#">Brigend Bingo Sites</a></li>
+              <li><a href="#">Cassava Bingo Sites</a></li>
+              <li><a href="#">Cozy Games Bingo Sites</a></li>
+              <li><a href="#">Deal or No Deal Bingo Sites</a></li>
+              <li><a href="#">Dragonfish Bingo Sites</a></li>
+              <li><a href="#">Gamesys Bingo Sites</a></li>
+              <li><a href="#">Microgaming Bingo Sites</a></li>
+              <li><a href="#">Virtue Fusion Bingo Site</a></li>
+            </ul></a></li>
+        <li><a class="py-5" href="#">PAYMENT METHOD
+            <ul class="list-unstyled">
+              <li><a href="#">Paypal Bingo Sites</a></li>
+              <li><a href="#">Paysafecard Bingo Sites (formerly Ukash)</a></li>
+              <li><a href="#">Pay by Phone Bingo Sites</a></li>
+            </ul></a></li>
+        <li><a class="py-5" href="#">BINGO REVIEWS</a></li>
+        <li><a class="py-5" href="#">NEWS</a></li>
+        <li><a class="py-5" href="#">BLOG</a></li>
+        <li><a class="py-5" href="#">BEST SLOTS SITES</a></li>
+        <li><a class="py-5" href="#">ABOUT</a></li>
+        <li><a class="py-5" href="#">CONTACT</a></li>
+        <li><a class="py-5" href="#">DISCLAIMER</a></li>
+      </ul>
+    </amp-sidebar>
+    <section class="container">
+      <h2>Articles</h2>
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4">
+            <div class="amp-img">
+              <amp-img class="card-img-top" src="images/covers/kozmo2.png" alt="" width="600" height="420" layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title h3">Are Electronic Arts Promoting Gambling to Children?</h5>
+              <ul class="info d-flex flex-wrap list-unstyle pl-0 mb-0">
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#date" x="0" y="0"></use>
+                  </svg><span>November 14, 2017</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#comments" x="0" y="0"></use>
+                  </svg><span>4 comments</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center"><a class="d-flex align-items-center" href="#">
+                    <svg class="info-ico" viewbox="0 0 100 100">
+                      <use xlink:href="#arrow" x="0" y="0"></use>
+                    </svg><span>Read more</span></a></li>
+              </ul>
+              <hr class="mt-0"/>
+              <p class="card-text">EA (Electronic Arts) is one of the biggest video games developers and distributors in the world,</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4">
+            <div class="amp-img">
+              <amp-img class="card-img-top" src="images/covers/rewind.png" alt="" width="600" height="420" layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title h3">Are Electronic Arts Promoting Gambling to Children?</h5>
+              <ul class="info d-flex flex-wrap list-unstyle pl-0 mb-0">
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#date" x="0" y="0"></use>
+                  </svg><span>November 14, 2017</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#comments" x="0" y="0"></use>
+                  </svg><span>0 comments</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center"><a class="d-flex align-items-center" href="#">
+                    <svg class="info-ico" viewbox="0 0 100 100">
+                      <use xlink:href="#arrow" x="0" y="0"></use>
+                    </svg><span>Read more</span></a></li>
+              </ul>
+              <hr class="mt-0"/>
+              <p class="card-text">EA (Electronic Arts) is one of the biggest video games developers and distributors in the world,</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4">
+            <div class="amp-img">
+              <amp-img class="card-img-top" src="images/covers/bgo.png" alt="" width="600" height="420" layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title h3">Are Electronic Arts Promoting Gambling to Children?</h5>
+              <ul class="info d-flex flex-wrap list-unstyle pl-0 mb-0">
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#date" x="0" y="0"></use>
+                  </svg><span>November 14, 2017</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#comments" x="0" y="0"></use>
+                  </svg><span>2 comments</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center"><a class="d-flex align-items-center" href="#">
+                    <svg class="info-ico" viewbox="0 0 100 100">
+                      <use xlink:href="#arrow" x="0" y="0"></use>
+                    </svg><span>Read more</span></a></li>
+              </ul>
+              <hr class="mt-0"/>
+              <p class="card-text">EA (Electronic Arts) is one of the biggest video games developers and distributors in the world,</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4">
+            <div class="amp-img">
+              <amp-img class="card-img-top" src="images/covers/kozmo2.png" alt="" width="600" height="420" layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title h3">Are Electronic Arts Promoting Gambling to Children?</h5>
+              <ul class="info d-flex flex-wrap list-unstyle pl-0 mb-0">
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#date" x="0" y="0"></use>
+                  </svg><span>November 14, 2017</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#comments" x="0" y="0"></use>
+                  </svg><span>2 comments</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center"><a class="d-flex align-items-center" href="#">
+                    <svg class="info-ico" viewbox="0 0 100 100">
+                      <use xlink:href="#arrow" x="0" y="0"></use>
+                    </svg><span>Read more</span></a></li>
+              </ul>
+              <hr class="mt-0"/>
+              <p class="card-text">EA (Electronic Arts) is one of the biggest video games developers and distributors in the world,</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4">
+            <div class="amp-img">
+              <amp-img class="card-img-top" src="images/covers/rewind.png" alt="" width="600" height="420" layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title h3">Are Electronic Arts Promoting Gambling to Children?</h5>
+              <ul class="info d-flex flex-wrap list-unstyle pl-0 mb-0">
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#date" x="0" y="0"></use>
+                  </svg><span>November 14, 2017</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#comments" x="0" y="0"></use>
+                  </svg><span>2 comments</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center"><a class="d-flex align-items-center" href="#">
+                    <svg class="info-ico" viewbox="0 0 100 100">
+                      <use xlink:href="#arrow" x="0" y="0"></use>
+                    </svg><span>Read more</span></a></li>
+              </ul>
+              <hr class="mt-0"/>
+              <p class="card-text">EA (Electronic Arts) is one of the biggest video games developers and distributors in the world,</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4">
+            <div class="amp-img">
+              <amp-img class="card-img-top" src="images/covers/bgo.png" alt="" width="600" height="420" layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title h3">Are Electronic Arts Promoting Gambling to Children?</h5>
+              <ul class="info d-flex flex-wrap list-unstyle pl-0 mb-0">
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#date" x="0" y="0"></use>
+                  </svg><span>November 14, 2017</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#comments" x="0" y="0"></use>
+                  </svg><span>0 comments</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center"><a class="d-flex align-items-center" href="#">
+                    <svg class="info-ico" viewbox="0 0 100 100">
+                      <use xlink:href="#arrow" x="0" y="0"></use>
+                    </svg><span>Read more</span></a></li>
+              </ul>
+              <hr class="mt-0"/>
+              <p class="card-text">EA (Electronic Arts) is one of the biggest video games developers and distributors in the world,</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4">
+            <div class="amp-img">
+              <amp-img class="card-img-top" src="images/covers/kozmo2.png" alt="" width="600" height="420" layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title h3">Are Electronic Arts Promoting Gambling to Children?</h5>
+              <ul class="info d-flex flex-wrap list-unstyle pl-0 mb-0">
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#date" x="0" y="0"></use>
+                  </svg><span>November 14, 2017</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#comments" x="0" y="0"></use>
+                  </svg><span>2 comments</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center"><a class="d-flex align-items-center" href="#">
+                    <svg class="info-ico" viewbox="0 0 100 100">
+                      <use xlink:href="#arrow" x="0" y="0"></use>
+                    </svg><span>Read more</span></a></li>
+              </ul>
+              <hr class="mt-0"/>
+              <p class="card-text">EA (Electronic Arts) is one of the biggest video games developers and distributors in the world,</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4">
+            <div class="amp-img">
+              <amp-img class="card-img-top" src="images/covers/rewind.png" alt="" width="600" height="420" layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title h3">Are Electronic Arts Promoting Gambling to Children?</h5>
+              <ul class="info d-flex flex-wrap list-unstyle pl-0 mb-0">
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#date" x="0" y="0"></use>
+                  </svg><span>November 14, 2017</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#comments" x="0" y="0"></use>
+                  </svg><span>120 comments</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center"><a class="d-flex align-items-center" href="#">
+                    <svg class="info-ico" viewbox="0 0 100 100">
+                      <use xlink:href="#arrow" x="0" y="0"></use>
+                    </svg><span>Read more</span></a></li>
+              </ul>
+              <hr class="mt-0"/>
+              <p class="card-text">EA (Electronic Arts) is one of the biggest video games developers and distributors in the world,</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4">
+            <div class="amp-img">
+              <amp-img class="card-img-top" src="images/covers/bgo.png" alt="" width="600" height="420" layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title h3">Are Electronic Arts Promoting Gambling to Children?</h5>
+              <ul class="info d-flex flex-wrap list-unstyle pl-0 mb-0">
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#date" x="0" y="0"></use>
+                  </svg><span>November 14, 2017</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center">
+                  <svg class="info-ico" viewbox="0 0 100 100">
+                    <use xlink:href="#comments" x="0" y="0"></use>
+                  </svg><span>12 comments</span>
+                </li>
+                <li class="mr-3 d-flex align-items-center"><a class="d-flex align-items-center" href="#">
+                    <svg class="info-ico" viewbox="0 0 100 100">
+                      <use xlink:href="#arrow" x="0" y="0"></use>
+                    </svg><span>Read more</span></a></li>
+              </ul>
+              <hr class="mt-0"/>
+              <p class="card-text">EA (Electronic Arts) is one of the biggest video games developers and distributors in the world,</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container py-4">
+      <amp-selector class="ampTabContainer" role="tablist" layout="container">
+        <div class="tabButton" role="tab" selected="" option="a">
+          <h4 class="py-2">Site of the month</h4>
+        </div>
+        <div class="tabContent" role="tabpanel">
+          <div class="p-2">
+            <div class="amp-img">
+              <amp-img class="img-fluid" src="images/banners/vernon_bingo.png" alt="" width="360" height="260" layout="responsive"></amp-img>
+            </div>
+          </div>
+        </div>
+        <div class="tabButton" role="tab" option="b">
+          <h4 class="py-2">No deposit offers</h4>
+        </div>
+        <div class="tabContent" role="tabpanel">
+          <div class="p-2">
+            <table class="table">
+              <thead class="thead-secondary">
+                <tr class="sans">
+                  <th scope="col">#</th>
+                  <th scope="col">Site</th>
+                  <th scope="col">Bonus</th>
+                  <th class="text-right" scope="col">Get Bonus</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>
+                    <h4>Merlin Bingo	</h4>
+                  </td>
+                  <td>£10 Free, No Deposit</td>
+                  <td class="text-right"><a class="btn btn-primary btn-sm" href="#">PLAY</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>
+                    <h4>Sparkly Bingo</h4>
+                  </td>
+                  <td>200% Deposit Bonus</td>
+                  <td class="text-right"><a class="btn btn-primary btn-sm" href="#">PLAY</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>
+                    <h4>Wish Bingo</h4>
+                  </td>
+                  <td>£10 Free, No Deposit</td>
+                  <td class="text-right"><a class="btn btn-primary btn-sm" href="#">PLAY</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>
+                    <h4>Sparkly Bingo</h4>
+                  </td>
+                  <td>200% Deposit Bonus</td>
+                  <td class="text-right"><a class="btn btn-primary btn-sm" href="#">PLAY</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>
+                    <h4>Wish Bingo</h4>
+                  </td>
+                  <td>£10 Free, No Deposit</td>
+                  <td class="text-right"><a class="btn btn-primary btn-sm" href="#">PLAY</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </amp-selector>
+    </section>
+    <section class="container">
+      <h2>BINGO NEWS</h2>
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4">
+            <div class="amp-img">
+              <amp-img class="card-img-top" src="images/covers/kozmo2.png" alt="" width="600" height="420" layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title h3">Are Electronic Arts Promoting Gambling to Children?</h5>
+              <p class="card-text">EA (Electronic Arts) is one of the biggest video games developers and distributors in the world,</p><a href="#">read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4">
+            <div class="amp-img">
+              <amp-img class="card-img-top" src="images/covers/rewind.png" alt="" width="600" height="420" layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title h3">Are Electronic Arts Promoting Gambling to Children?</h5>
+              <p class="card-text">EA (Electronic Arts) is one of the biggest video games developers and distributors in the world,</p><a href="#">read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4">
+            <div class="amp-img">
+              <amp-img class="card-img-top" src="images/covers/bgo.png" alt="" width="600" height="420" layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title h3">Are Electronic Arts Promoting Gambling to Children?</h5>
+              <p class="card-text">EA (Electronic Arts) is one of the biggest video games developers and distributors in the world,</p><a href="#">read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footerSite container-fluid p-0">
+      <div class="container">
+        <div class="row d-flex flex-wrap">
+          <div class="col-12 col-md-6 col-lg-3">
+            <h3 class="mt-4 title">BEST TOP 5 BINGO SITES</h3>
+            <hr class="title-underline"/>
+            <ul class="d-flex flex-column list-unstyled footerSiteList">
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/paddy-power-bingo/"><span class="footer-title">Paddy Power Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/vernons-bingo/"><span class="footer-title">Vernons Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/rewind-bingo/"><span class="footer-title">Rewind Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/betfair-bingo/"><span class="footer-title">Betfair Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/kingdom-of-bingo/"><span class="footer-title">Kingdom of Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/treasure-bingo/"><span class="footer-title">Treasure Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/iceland-bingo/"><span class="footer-title">Iceland Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/gala-bingo/"><span class="footer-title">Gala Bingo</span></a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h3 class="mt-4 title">LATEST BINGO SITES</h3>
+            <hr class="title-underline"/>
+            <ul class="d-flex flex-column list-unstyled footerSiteList">
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/paddy-power-bingo/"><span class="footer-title">Paddy Power Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/vernons-bingo/"><span class="footer-title">Vernons Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/rewind-bingo/"><span class="footer-title">Rewind Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/betfair-bingo/"><span class="footer-title">Betfair Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/kingdom-of-bingo/"><span class="footer-title">Kingdom of Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/treasure-bingo/"><span class="footer-title">Treasure Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/iceland-bingo/"><span class="footer-title">Iceland Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/gala-bingo/"><span class="footer-title">Gala Bingo</span></a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h3 class="mt-4 title">PLAYER FAVOURITES</h3>
+            <hr class="title-underline"/>
+            <ul class="d-flex flex-column list-unstyled footerSiteList">
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/paddy-power-bingo/"><span class="footer-title">Paddy Power Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/vernons-bingo/"><span class="footer-title">Vernons Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/rewind-bingo/"><span class="footer-title">Rewind Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/betfair-bingo/"><span class="footer-title">Betfair Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/kingdom-of-bingo/"><span class="footer-title">Kingdom of Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/treasure-bingo/"><span class="footer-title">Treasure Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/iceland-bingo/"><span class="footer-title">Iceland Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/gala-bingo/"><span class="footer-title">Gala Bingo</span></a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h3 class="mt-4 title">Links</h3>
+            <hr class="title-underline"/>
+            <ul class="d-flex flex-column list-unstyled footerSiteList">
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/paddy-power-bingo/"><span class="footer-title">Paddy Power Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/vernons-bingo/"><span class="footer-title">Vernons Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/rewind-bingo/"><span class="footer-title">Rewind Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/betfair-bingo/"><span class="footer-title">Betfair Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/kingdom-of-bingo/"><span class="footer-title">Kingdom of Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/treasure-bingo/"><span class="footer-title">Treasure Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/iceland-bingo/"><span class="footer-title">Iceland Bingo</span></a></li>
+              <li><a class="color-w" href="https://www.bestnewbingosites.co.uk/bingo-site/gala-bingo/"><span class="footer-title">Gala Bingo</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container footerSite-row d-flex flex-column justify-content-center py-4">
+        <div class="row">
+          <div class="col text-center footerSiteList"><a class="ml-0" href="/about-us"><strong>HOME</strong></a><a class="ml-4" href="/about-us"><strong>ABOUT</strong></a><a class="ml-4" href="/about-us"><strong>CONTACT</strong></a><a class="ml-4" href="/contact"><strong>DISCLAMER</strong></a></div>
+          <div class="col">
+            <div class="amp-img">
+              <amp-img class="img-fluid" src="images/gc-logo.png" alt="" width="125" height="25" layout="responsive"></amp-img>
+            </div>
+          </div>
+          <div class="col">
+            <div class="amp-img">
+              <amp-img class="img-fluid" src="images/begambleaware_logo.png" alt="" width="125" height="25" layout="responsive"></amp-img>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="amp-img">
+              <amp-img class="img-fluid" src="images/18-icon.png" alt="" width="43" height="40" layout="responsive"></amp-img>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col py-3">
+            <p class="text-center copyright">Copyright © 2011- 2018 WDW Bingo</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

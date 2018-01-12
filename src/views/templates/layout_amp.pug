@@ -3,8 +3,8 @@ block vars
 	- amp = true
 	//- dev = false
 	//- dev = true
-	- inline = true
 	- inline = false
+	- inline = true
 
 block meta
 	meta(charset='UTF-8')
@@ -14,14 +14,11 @@ block meta
 
 block link
 	link(rel="canonical" href="hello-world.html")
-	script(async='', src='https://cdn.ampproject.org/v0.js')
-	script(async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
-	//-script(async='', custom-element='amp-iframe', src='https://cdn.ampproject.org/v0/amp-iframe-0.1.js')
-	//-script(async='', custom-element='amp-app-banner', src='https://cdn.ampproject.org/v0/amp-app-banner-0.1.js')
-	
-	script(async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js")
-	script(async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js")
-	script(async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js")
+	//-script(async='', src='https://cdn.ampproject.org/v0.js')
+	//-script(async='', custom-element='amp-sidebar', src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js')
+	//-script(async='', custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js")
+	//-script(async='', custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js")
+	//-script(async='', custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js")
 
 	//- fonts
 	link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald")
@@ -35,7 +32,7 @@ block link
 	<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 	
 block header
-	.d-none
+	//-.d-none
 		include ../includes/svg/svg_BingoPage.pug
 	
 	

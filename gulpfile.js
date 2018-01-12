@@ -71,12 +71,12 @@ gulp.task('sass', function () {
 		//}));
 });
 
-
-gulp.task('uncss',['build'], function () {
+gulp.task('uncss' ,['build'] , function () {
 	return gulp.src(paths.sass + '**/*.scss')
 		.pipe(sass({outputStyle: 'compressed'})).on('error', sass.logError)
 		.pipe(uncss({
-			html: ['app/index_amp.html', 'app/blog_amp.html', 'app/list_amp.html', 'app/reviews_amp.html' ]
+			//html: ['app/index_amp.html']
+			html: ['app/index_amp.html', 'app/blog_amp.html', 'app/list_amp.html', 'app/post_amp.html', 'app/reviews_amp.html']
 		}))
 		.pipe(prefix(['last 2 versions'], {
 			cascade: true
