@@ -290,10 +290,8 @@ mixin top(no, title, software , offer, depozit)
 		.content.row.py-1
 			.col-1.text-center.d-none.d-lg-block= no
 			.col.d-none.d-lg-block
-				h3.text-center.text-lg-left.title-bingo
-					= title
-					br
-					+stars(4)
+				h3.text-center.text-lg-left.title-bingo= title
+				+stars(4)
 			.col
 				.d-block.d-lg-none
 					.badge= no
@@ -306,11 +304,14 @@ mixin top(no, title, software , offer, depozit)
 			.col.d-none.d-lg-block
 				small= software
 			.col.d-none.d-lg-block.text-right
-				.top--cta.w-100
-					a.btn.btn-primary.mr-2(href="#") PLAY NOW
+				.top--cta.w-100.text-center
+					a.btn.btn-primary.mb-0.mb-md-2(href="#") PLAY NOW
+					a.btn.btn-outline-primary(href="#") Read Reviews
 		
 		footer.text-center
-			a.d-inline-block.d-lg-none.btn.btn-primary(href="#") PLAY NOW
+			.d-inline-block.d-lg-none
+				a.btn.btn-primary(href="#") PLAY NOW
+				a.btn.btn-outline-primary(href="#") Read Reviews
 			.text-muted.terms-font.text-center.py-2 * New players only, 18+. T&Cs including wagering requirements apply. Please gamble responsibly
 
 mixin image(myClass, path, w, h )

@@ -8,13 +8,22 @@
 	.line
 		border-bottom: 1px solid red
 	
+	.btn
+		width: 8rem
+
 	&--colorBlue
 		border: 1px solid $blue
 		.top--head
 			background: $blue
-		.btn
+		.btn-primary
 			background: $blue
 			border-color: darken($blue, 10%)
+		.btn-outline-primary
+			color: $blue
+			border-color: $blue
+			&:focus, &:hover, &:active, &:not([disabled]):not(.disabled):active
+				background: white
+				color: $blue
 		.line
 			border-bottom: 1px solid $blue
 
@@ -22,8 +31,14 @@
 		border: 1px solid $primary
 		.top--head
 			background: $primary
-		.btn
+		.btn-primary
 			background: $primary
 			border-color: darken($primary, 10%)
+		.btn-outline-primary
+			border-color: $primary
+			color: $primary
+			&:focus, &:hover, &:active, &:not([disabled]):not(.disabled):active
+				background: white
+				color: $primary
 		.line
 			border-bottom: 1px solid $primary

@@ -1,9 +1,10 @@
 extends layout
 block vars
 	- amp = true
-	//- dev = false
+	
+	- dev = false
 	- dev = true
-	- inline = false
+	//- inline = false
 	- inline = true
 
 block meta
@@ -48,8 +49,9 @@ block header
 	nav.nav
 		//- LOGO
 		a.logo.ml-3.mt-2(href='/')
-			//- +image("img-fluid", "images/logoWDWBingo.png", 110, 44)
-			svg.logo(viewbox='0 0 188 80')
+			+image("img-fluid", "images/wdw_logo.png", 131, 66)
+			
+			//-svg.logo(viewbox='0 0 188 80')
 				use(xlink:href='#logo', x='0', y='0')
 		//-.ampstart-btn
 		a.ml-auto.px-2.float-right.startButton(on='tap:sidebar.toggle'): strong
